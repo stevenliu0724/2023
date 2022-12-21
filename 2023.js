@@ -5,11 +5,12 @@ const particleArray = [];
 let hcolor = 0;
 const imgWidth = 100;
 const imgHeight = 405;
-const imgRatio = imgWidth / imgHeight;
-const canvasRatio = canvas.width / canvas.height;
+const imgRatio = imgHeight / imgWidth;
+const imgWidthRatio =  0.5;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+console.log(canvas.width);
 
 
 // window.addEventListener("rezie", function(){
@@ -101,8 +102,8 @@ function animate(){
     hcolor+=5;
     requestAnimationFrame(animate);
     c.font = "30px impact";
-    c.drawImage(img, 0, 0, imgHeight * imgRatio, imgHeight);
-    c.fillText("Happy 2023!", canvas.width / 2, canvas.height / 2);
+    c.drawImage(img, 0, 0, imgWidth * imgWidthRatio, imgWidth * imgRatio);
+    c.fillText("Happy 2023!", canvas.width / 2, 50);
     c.textAlign = "center";
 };
 
