@@ -1,10 +1,16 @@
 const canvas = document.getElementById("CVS");
+const img = document.getElementById("image");
 const c = canvas.getContext("2d");
 const particleArray = [];
 let hcolor = 0;
+const imgWidth = 100;
+const imgHeight = 405;
+const imgRatio = imgWidth / imgHeight;
+const canvasRatio = canvas.width / canvas.height;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+
 
 // window.addEventListener("rezie", function(){
 //     canvas.width = window.innerWidth;
@@ -94,10 +100,10 @@ function animate(){
     handleparticle();
     hcolor+=5;
     requestAnimationFrame(animate);
-    c.font = "30px Arial";
-    c.textAlign = "center";
+    c.font = "30px impact";
+    c.drawImage(img, 0, 0, imgHeight * imgRatio, imgHeight);
     c.fillText("Happy 2023!", canvas.width / 2, canvas.height / 2);
-    c.drawImage(image, canvas.width * 0.3, canvas.height * 0.3);
+    c.textAlign = "center";
 };
 
 animate();
