@@ -6,10 +6,10 @@ let hcolor = 0;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-window.addEventListener("rezie", function(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});
+// window.addEventListener("rezie", function(){
+//     canvas.width = window.innerWidth;
+//     canvas.height = window.innerHeight;
+// });
 
 const mouse = {
     x: undefined,
@@ -97,7 +97,7 @@ function animate(){
     c.font = "30px Arial";
     c.textAlign = "center";
     c.fillText("Happy 2023!", canvas.width / 2, canvas.height / 2);
-    c.drawImage(image, canvas.width * 0.3, canvas.height* 0.3);
+    c.drawImage(image, canvas.width * 0.3, canvas.height * 0.3);
 };
 
 animate();
