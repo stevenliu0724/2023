@@ -6,7 +6,7 @@ let hcolor = 0;
 const imgWidth = 100;
 const imgHeight = 405;
 const imgRatio = imgHeight / imgWidth;
-const imgWidthRatio =  0.5;
+const imgWidthRatio =  1;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
